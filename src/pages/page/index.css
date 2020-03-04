@@ -1,0 +1,5 @@
+.page-box {
+    border: 1px solid red;
+    display: flex;
+    transform: rotate(45deg);
+}

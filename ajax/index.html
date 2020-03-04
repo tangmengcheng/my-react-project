@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script src="https://cdn.bootcss.com/jquery/3.4.0/jquery.min.js"></script>
+<script>
+    $(function () {
+        $.ajax({
+            type: 'get', // jquery是不支持post方式跨域的
+            async: false, // 同步方式
+            url: 'http://v.juhe.cn/sweizhang/citys?province=&dtype=&key=a52e220d5f481f8637998c6fe16a47c3',
+            dataType: 'json',
+            jsonp: 'jsoncallback',
+            jsonpCallback: "success_jsonpCallback",
+            success: function (data) {
+                console.log(data)
+            }
+        })
+    })
+    // var xhr = null;
+    // // 1. 创建ajax引擎对象
+    // if(window.XMLHttpRequest) {
+    //     // 所有现代浏览器（IE7+.Firefox.Chrome. Safari. Opera）
+    //     xhr = new XMLHttpRequest();
+    // } else {
+    //     // 老版本的IE5，6
+    //     xhr = new ActiveXObject("Microsoft.XMLHttp")
+    // }
+    // // 2. 配置请求对象
+    // xhr.open('GET', 'http://v.juhe.cn/sweizhang/citys?province=&dtype=&key=a52e220d5f481f8637998c6fe16a47c3', true)
+    //
+    // // 3. 发送数据
+    // xhr.send(null)
+    //
+    // // 4. 监听ajax引擎对象是否改变
+    // xhr.onreadystatechange = function () {
+    //     if (xhr.readyState == 4 && xhr.status == 200) {
+    //         console.log(xhr.responseText)
+    //     }
+    // }
+
+
+
+</script>
+</body>
+</html>
